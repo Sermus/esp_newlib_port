@@ -236,5 +236,5 @@ void* _realloc_r(struct _reent *rptr, void* ptr, size_t size) {
 void* _calloc_r(struct _reent *rptr, size_t num, size_t size) {
     void *ptr = os_malloc(num * size);
     os_bzero(ptr, num * size);
-    return os_malloc(size);
+    return ptr;
 }
