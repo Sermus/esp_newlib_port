@@ -10,15 +10,6 @@
 #include <user_interface.h>
 
 int errno;
-
-/*
- environ
- A pointer to a list of environment variables and their values. 
- For a minimal environment, this empty list is adequate:
- */
-char *__env[1] = { 0 };
-char **environ = __env;
-
 int _write_r(struct _reent *ptr, int file, char *c, int len);
 
 void _exit(int status) {
